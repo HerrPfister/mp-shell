@@ -29,3 +29,6 @@ commands
 	Redirecting works the same as well, 
 		i.e. ls > test
 			cat < test
+
+	Complex commands work as well,
+		i.e. ps -a | grep mpShell > log 

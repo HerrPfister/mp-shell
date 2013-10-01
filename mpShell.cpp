@@ -43,7 +43,7 @@ int main(int argc, char * argv[])
 
 	while(1)
 	{
-		cout << "mpShell<: ";
+		cout << "mpShell_: ";
 
 		//Grab user input
 		getline(cin, input);
@@ -74,12 +74,6 @@ int main(int argc, char * argv[])
 			toParse.push_back(temp);
 		}
 
-		/*
-			//Print out input that was parsed
-			for(i=0;i<toParse.size();i++)
-				cout << toParse.at(i) << endl;
-		*/
-
 		for(i = 0; i < toParse.size(); i++)
 		{
 			vector<string> token_vec;
@@ -102,16 +96,7 @@ int main(int argc, char * argv[])
 					token_vec.push_back(curr_substr);
 			}
 			toExecute.push_back(token_vec);
-		}
-		
-			//Print out commands to be executed
-			for(i = 0; i < toExecute.size();i++)
-			{
-				vector<string> temp = toExecute.at(i);
-				for(j=0; j < temp.size(); j++)
-					cout << temp.at(j) << endl;
-			}
-		
+		}		
 
 		//Run cmd
 		runCMD(toExecute, redirect, fileName);
